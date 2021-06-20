@@ -1,0 +1,6 @@
+[ general ]
+[ content ]
+[ bugs ]
+[ misc ]
+	- warn if some fields are missing
+	? what if filepath is given
