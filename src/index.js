@@ -1,7 +1,9 @@
 import { sortObject } from "./utils.js"
 import fields from "./fields.js"
 
-export default function sort ( pkg ) {
+export default function sort ( pkg, { stringify = true } = {}) {
+	if (typeof pkg == "string" || Buffer.isBuffer(pkg)) pkg = JSON.parse(pkg)
+
 	let nPkg = Object.fromEntries(
 		Object.entries(pkg).map(([ key, val ]) => {
 			let field = fields.find(( f ) => f.key == key)
@@ -30,6 +32,11 @@ export default function sort ( pkg ) {
 			}
 		})
 	)
+	nPkg = sortObject(nPkg, fields.map(({ key }) => key))
 
-	return sortObject(nPkg, fields.map(({ key }) => key))
+	if (stringify === false) {
+		return nPkg
+	} else {
+		return JSON.stringify(nPkg, null, "\t") + "\n"
+	}
 }

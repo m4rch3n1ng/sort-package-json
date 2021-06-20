@@ -30,6 +30,8 @@ $ npx @m4rch/sort-pacakge-json
 
 you can import the package via
 
+## main
+
 ```js
 import sortPackage from "@m4rch/sort-package-json"
 ```
@@ -38,7 +40,7 @@ and then use it
 
 ```js
 /*
-	get and parse the package
+	get the package content
 */
 
 let sorted = sortPackage(pkg)
@@ -47,6 +49,18 @@ let sorted = sortPackage(pkg)
 	write the sorted package back using fs and JSON.stringify()
 */
 ```
+
+`sortPackage` takes two arguments:
+
+- `pkg`
+- `options`
+
+`pkg` is either an object, a string or a buffer and is the content of the package.json file
+
+`options` (optional) is an object containing the options you want to give to the sorter. current options are
+- `stringify`: whether or not to stringify the result (default: `true`)
+
+## handler
 
 or you can import the handler
 
