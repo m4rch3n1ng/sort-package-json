@@ -6,7 +6,7 @@ export default function sort ( pkg, { stringify = true } = {}) {
 
 	let nPkg = Object.fromEntries(
 		Object.entries(pkg).map(([ key, val ]) => {
-			let field = fields.find(( f ) => f.key == key)
+			const field = fields.find(( f ) => f.key == key)
 
 			if (!field || !field.sort || typeof val != "object") return [ key, val ]
 

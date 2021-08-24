@@ -1,21 +1,26 @@
 {
 	"name": "@m4rch/sort-package-json",
-	"version": "0.1.1",
-	"description": "",
-	"keywords": [],
-	"license": "Unlicense",
+	"version": "0.2.0",
+	"description": "sort your package.json",
 	"author": "m4rch",
-	"type": "module",
+	"license": "Unlicense",
+	"main": "src/index.js",
+	"keywords": [
+		"m4rch",
+		"package.json",
+		"sort-package-json"
+	],
 	"exports": {
 		".": "./src/index.js",
 		"./handler": "./bin/handler.js"
 	},
-	"main": "src/index.js",
 	"bin": {
 		"@m4rch/sort-package-json": "bin/sort.js",
-		"sort-package-json": "bin/sort.js"
+		"sort-package-json": "bin/sort.js",
+		"spj": "bin/sort.js"
 	},
 	"dependencies": {
 		"sade": "^1.7.4"
-	}
+	},
+	"type": "module"
 }

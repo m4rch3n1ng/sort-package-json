@@ -20,10 +20,36 @@ and then use it via
 $ sort-package-json
 ```
 
+or
+
+```
+$ spj
+```
+
 or you can use npx
 
 ```
 $ npx @m4rch/sort-pacakge-json
+```
+
+## cli
+
+```
+$ spj -h
+
+  Description
+    sorts your package.json
+
+  Usage
+    $ sort-package-json [dir] [options]
+
+  Options
+    -v, --version    Displays current version
+    -h, --help       Displays this message
+
+  Examples
+    $ sort-package-json
+    $ sort-package-json project
 ```
 
 # api
@@ -46,7 +72,7 @@ and then use it
 let sorted = sortPackage(pkg)
 
 /*
-	write the sorted package back using fs and JSON.stringify()
+	write the sorted package back using fs
 */
 ```
 
