@@ -11,7 +11,12 @@ export default function sort ( pkg, { stringify = true } = {}) {
 			if (!field || !field.sort || typeof val != "object") return [ key, val ]
 
 			if (!Array.isArray(val)) {
-				return [ key, sortObject(val, Array.isArray(field.sort) ? field.sort : []) ]
+				return [
+					key,
+					typeof field.sort == "function"
+						? Object.fromEntries(Object.entries(val).sort(field.sort))
+						: sortObject(val, Array.isArray(field.sort) ? field.sort : [])
+				]
 			} else {
 				if (!Array.isArray(field.sort)) {
 					return [ key, val.sort() ]
@@ -22,7 +27,9 @@ export default function sort ( pkg, { stringify = true } = {}) {
 							if (typeof v != "object") return v
 
 							if (!Array.isArray(v)) {
-								return sortObject(v, Array.isArray(field.sort) ? field.sort : [])
+								return typeof field.sort == "function"
+									? Object.fromEntries(Object.entries(v).sort(field.sort))
+									: sortObject(v, Array.isArray(field.sort) ? field.sort : [])
 							} else {
 								return val.sort()
 							}

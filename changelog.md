@@ -1,31 +1,39 @@
-# @m4rch/sort-package-json
+# changelog
 
-# v0.2.0
+all notable changes to this project will be documented in this file.
 
-*2021-08-24*
+the format is loosely based on [keep a changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
-- changed sorting to be more in line with [the npm recommendation](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
-  - (but not completely)
+## [0.3.0]
 
-***
+### changed
 
-- cli: added logs
+- changed sorting for dependencies, so dependencies starting with @ are now at the top
+- changed changelog.md
+
+## [0.2.0] - 2021-08-24
+
+### added
+
 - cli: added "spj" to bins
+- cli: added logs
 
-***
+### changed
 
+- changed sorting to be more in line with [the npm recommendation](https://docs.npmjs.com/cli/v7/configuring-npm/package-json), but also more personalized
 - `let` -> `const`
 
-# v0.1.1
+## [0.1.1] - 2021-06-20
 
-*2021-06-20*
+### added
 
 - support for string and buffer
 - automatically stringify result
-  - option to change that behaviour
+- option to disable stringify
 
-# v0.1.0
+## [0.1.0] - 2021-06-20
 
-*2021-06-20*
+### added
 
 - initial release

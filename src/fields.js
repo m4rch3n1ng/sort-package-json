@@ -1,5 +1,8 @@
 const sortURL = [ "type", "url" ]
 const sortPeople = [ "name", "email", "url" ]
+const sortDeps = ([ d1 ], [ d2 ]) => (
+	/^@/.test(d1) === /^@/.test(d2) ? d1.localeCompare(d2) : (d1.startsWith("@") ? -1 : 1)
+)
 
 export default [
 	{ key: "$schema" },
@@ -28,12 +31,12 @@ export default [
 	{ key: "repository", sort: sortURL },
 	{ key: "scripts", sort: true },
 	{ key: "betterScripts", sort: true },
-	{ key: "dependencies", sort: true },
-	{ key: "devDependencies", sort: true },
-	{ key: "dependenciesMeta", sort: true },
-	{ key: "peerDependencies", sort: true },
-	{ key: "peerDependenciesMeta", sort: true },
-	{ key: "optionalDependencies", sort: true },
+	{ key: "dependencies", sort: sortDeps },
+	{ key: "devDependencies", sort: sortDeps },
+	{ key: "dependenciesMeta", sort: sortDeps },
+	{ key: "peerDependencies", sort: sortDeps },
+	{ key: "peerDependenciesMeta", sort: sortDeps },
+	{ key: "optionalDependencies", sort: sortDeps },
 	{ key: "bundledDependencies", sort: true },
 	{ key: "bundleDependencies", sort: true },
 	{ key: "type" },
