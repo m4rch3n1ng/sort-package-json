@@ -1,6 +1,6 @@
 {
 	"name": "@m4rch/sort-package-json",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "sort your package.json",
 	"author": "m4rch",
 	"license": "Unlicense",
