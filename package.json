@@ -1,6 +1,6 @@
 {
 	"name": "@m4rch/sort-package-json",
-	"version": "0.3.1",
+	"version": "0.4.0",
 	"description": "sort your package.json",
 	"author": "m4rch",
 	"license": "Unlicense",
@@ -15,7 +15,6 @@
 		"./handler": "./bin/handler.js"
 	},
 	"bin": {
-		"@m4rch/sort-package-json": "bin/sort.js",
 		"sort-package-json": "bin/sort.js",
 		"spj": "bin/sort.js"
 	},
