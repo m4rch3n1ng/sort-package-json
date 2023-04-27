@@ -9,7 +9,7 @@ export default function handler ( folder = "." ) {
 	const sortPkg = sortPackage(readFileSync(pkgPath).toString())
 	writeFileSync(
 		pkgPath,
-		JSON.stringify(sortPkg, null, "\t")
+		JSON.stringify(sortPkg, null, "\t") + "\n"
 	)
 
 	console.log(`sorted ${join(folder, "package.json").replace(/\\/g, "/")}`)
