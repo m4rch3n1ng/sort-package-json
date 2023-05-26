@@ -7,6 +7,12 @@ and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## [0.4.3]
+
+### fixed
+
+- typing: `Record<string, unknown>` => `Record<string, any>`
+
 ## [0.4.2]
 
 ### fixed

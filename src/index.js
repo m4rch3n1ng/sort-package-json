@@ -36,8 +36,8 @@ function sortPkgVal ( key, val ) {
 
 /**
  * sort package.json
- * @param {Record<string, unknown>} pkg package.json
- * @returns {Record<string, unknown>} the sorted package
+ * @param {Record<string, any>} pkg package.json
+ * @returns {Record<string, any>} the sorted package
  */
 export default function sort ( pkg ) {
 	const nPkg = Object.fromEntries(
