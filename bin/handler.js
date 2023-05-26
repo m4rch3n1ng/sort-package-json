@@ -6,7 +6,10 @@ export default function handler ( folder = "." ) {
 	const pkgPath = join(process.cwd(), folder, "package.json")
 	if (!existsSync(pkgPath)) return console.log(`${join(folder, "package.json").replace(/\\/g, "/")} does not exist.`)
 
-	const sortPkg = sortPackage(readFileSync(pkgPath).toString())
+	const pkgString = readFileSync(pkgPath).toString()
+	const pkgJson = JSON.parse(pkgString)
+	const sortPkg = sortPackage(pkgJson)
+
 	writeFileSync(
 		pkgPath,
 		JSON.stringify(sortPkg, null, "\t") + "\n"

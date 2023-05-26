@@ -5,6 +5,25 @@ all notable changes to this project will be documented in this file.
 the format is loosely based on [keep a changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
+## [unreleased]
+
+## [0.4.2]
+
+### fixed
+
+- fix: fix typing
+- fix: fix version on `--version`
+
+### changed
+
+- chore: use jsdoc
+
+## [0.4.1]
+
+### fixed
+
+- fix: re-add newline at the end of package.json
+
 ## [0.4.0]
 
 ### fixed

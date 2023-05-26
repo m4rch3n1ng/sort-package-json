@@ -5,7 +5,7 @@ import handler from "./handler.js"
 
 sade("sort-package-json [dir]")
 	.describe("sorts your package.json")
-	.version("v0.2.0")
+	.version("v0.4.2")
 	.example("")
 	.example("project")
 	.action(handler)

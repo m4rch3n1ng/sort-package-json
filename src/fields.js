@@ -1,5 +1,12 @@
 const sortURL = [ "type", "url" ]
 const sortPeople = [ "name", "email", "url" ]
+
+/**
+ * 
+ * @param {[string, any]} param0 0
+ * @param {[string, any]} param1 0
+ * @returns {number}
+ */
 const sortDeps = ([ d1 ], [ d2 ]) => (
 	/^@/.test(d1) === /^@/.test(d2) ? d1.localeCompare(d2) : (d1.startsWith("@") ? -1 : 1)
 )

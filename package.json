@@ -1,6 +1,6 @@
 {
 	"name": "@m4rch/sort-package-json",
-	"version": "0.4.1",
+	"version": "0.4.2",
 	"description": "sort your package.json",
 	"author": "m4rch",
 	"license": "Unlicense",
@@ -11,15 +11,30 @@
 		"sort-package-json"
 	],
 	"exports": {
-		".": "./src/index.js",
-		"./handler": "./bin/handler.js"
+		".": {
+			"import": "./src/index.js",
+			"types": "./types/src/index.d.ts"
+		},
+		"./handler": {
+			"import": "./bin/handler.js",
+			"types": "./types/bin/handler.d.ts"
+		}
 	},
 	"bin": {
 		"sort-package-json": "bin/sort.js",
 		"spj": "bin/sort.js"
 	},
+	"scripts": {
+		"build": "tsc -b",
+		"prepare": "npm run build"
+	},
 	"dependencies": {
 		"sade": "^1.7.4"
 	},
+	"devDependencies": {
+		"@types/node": "^20.2.4",
+		"typescript": "^5.0.4"
+	},
+	"types": "./types/src/index.d.ts",
 	"type": "module"
 }
